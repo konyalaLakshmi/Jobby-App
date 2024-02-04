@@ -1,61 +1,71 @@
-.nav-container {
-  background-color: #272727;
-  padding: 10px;
-  font-family: 'Roboto';
-}
-.list-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-}
-.logo-container {
-  margin-left: 20px;
-}
-.links-container {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 80px;
-}
-.logo {
+.home-header {
+  background-color: #2c364c;
+  min-height: 10vh;
   width: 100%;
-  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: fixed;
+  margin-bottom: 10px;
 }
-.link {
-  text-decoration: none;
-}
-.h1 {
-  color: white;
-  font-size: 23px;
-  font-weight: bold;
-}
-@media screen and (max-width: 767px) {
-  .h1 {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .logout-btn {
-    cursor: pointer;
-    width: 90px;
-    background-color: #4f46e5;
-    font-size: 10px;
-    border: 0px solid none;
-    border-radius: 4px;
-    color: white;
-    height: 25px;
-  }
-}
-.logout-btn {
-  cursor: pointer;
+
+.home-logo {
+  height: 50px;
   width: 140px;
-  background-color: #4f46e5;
-  font-size: 19px;
-  border: 0px solid none;
-  border-radius: 6px;
+}
+.header-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 130px;
+  font-size: 10px;
   color: white;
-  width: 35px;
+}
+.home-button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 130px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.header-items-sm {
+  display: none;
+}
+@media screen and (max-width: 766px) {
+  .home-header {
+    display: none;
+  }
+  .home-header-sm {
+    background-color: #2c364c;
+    min-height: 10vh;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: fixed;
+    margin-bottom: 20px;
+  }
+  .home-logo-sm {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .header-items-sm {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-icon {
+    margin-left: 25px;
+  }
 }

@@ -1,0 +1,130 @@
+.jobs-container {
+  background-color: black;
+  min-height: 90vh;
+  display: flex;
+  width: 100vw;
+}
+
+.job-div-1 {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  margin-right: 40px;
+  margin-left: 30px;
+  margin-top: 60px;
+}
+.line-break {
+  width: 100%;
+  margin-top: 20px;
+}
+.employment {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+.each-employ {
+  color: white;
+  list-style-type: none;
+}
+.label-input {
+  margin-left: 10px;
+  font-size: 15px;
+  color: #f1f5f9;
+}
+.job-div-2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  width: 75vw;
+  margin-top: 60px;
+  margin-right: 60px;
+}
+.search-input {
+  background-color: transparent;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  width: 93%;
+  color: white;
+}
+.job-search-input {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 40px;
+}
+.search-button {
+  width: 60px;
+}
+.jobs-failure-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  color: white;
+}
+.retry-button {
+  background-color: blue;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  width: 120px;
+  padding: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.jobs-loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.no-jobs-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  color: white;
+}
+.job-search-input-sm {
+  display: none;
+}
+
+@media screen and (max-width: 766px) {
+  .job-search-input-sm {
+    margin-top: 50px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .job-search-input {
+    display: none;
+  }
+
+  .jobs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .job-div-1 {
+    width: 90%;
+    margin-left: 30px;
+    margin-right: 60px;
+    margin-top: 60px;
+  }
+  .job-div-2 {
+    width: 90%;
+    margin: 0px;
+  }
+}
+

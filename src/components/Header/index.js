@@ -1,42 +1,72 @@
+import Cookies from 'js-cookie'
+import {withRouter, Link} from 'react-router-dom'
+import {AiFillHome} from 'react-icons/ai'
+import {HiMail} from 'react-icons/hi'
+import {FiLogOut} from 'react-icons/fi'
 import './index.css'
 
-import {Link, withRouter} from 'react-router-dom'
-
-import Cookies from 'js-cookie'
-
 const Header = props => {
-  const onClickLogout = () => {
+  const onLogout = () => {
     const {history} = props
     Cookies.remove('jwt_token')
     history.replace('/login')
   }
+
   return (
-    <nav className="nav-container">
-      <ul className="list-container">
-        <li className="logo-container">
-          <Link to="/" className="link">
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-              className="logo"
-              alt="website logo"
-            />
-          </Link>
-        </li>
-        <li className="links-container">
-          <Link to="/" className="link">
-            <h1 className="h1">Home</h1>
-          </Link>
-          <Link to="/jobs" className="link">
-            <h1 className="h1">Jobs</h1>
-          </Link>
-        </li>
-        <li className="btn-container">
-          <button className="logout-btn" type="button" onClick={onClickLogout}>
+    <>
+      <div className="home-header">
+        <Link to="/" className="links">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/logo-img.png "
+            alt="website logo"
+            className="home-logo"
+          />
+        </Link>
+
+        <div className="header-items">
+          <li>
+            <Link to="/" className="links">
+              <h1>Home</h1>
+            </Link>
+          </li>
+          <li>
+            <Link to="/jobs" className="links">
+              <h1>Jobs</h1>
+            </Link>
+          </li>
+        </div>
+        <li>
+          <button type="button" className="home-button" onClick={onLogout}>
             Logout
           </button>
         </li>
-      </ul>
-    </nav>
+      </div>
+      <div className="home-header-sm">
+        <Link to="/" className="links">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/logo-img.png "
+            alt="website logo"
+            className="home-logo-sm"
+          />
+        </Link>
+        <ul className="header-items-sm">
+          <Link to="/" className="links">
+            <li>
+              <AiFillHome size="28" className="header-icon" />
+            </li>
+          </Link>
+          <Link to="/jobs" className="links">
+            <li>
+              <HiMail size="28" className="header-icon" />
+            </li>
+          </Link>
+
+          <li onClick={onLogout}>
+            <FiLogOut size="30" className="header-icon" />
+          </li>
+        </ul>
+      </div>
+    </>
   )
 }
 
