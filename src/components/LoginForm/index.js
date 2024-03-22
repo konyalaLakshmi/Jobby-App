@@ -22,30 +22,30 @@ class LoginForm extends Component {
   };
 
   onSubmitFailure = errorMsg => {
-    this.setState({ showSubmitError: true, errorMsg });
+    this.setState({showSubmitError: true, errorMsg });
   };
 
   onSubmitForm = async event => {
-    event.preventDefault();
-    const { username, password } = this.state;
+    event.preventDefault()
+    const {username, password} = this.state;
     if (username === 'lakshmi' && password === 'lakshmi@2022') {
       // Simulating a successful login with a fake JWT token
-      this.onSubmitSuccess('fake_jwt_token');
+      this.onSubmitSuccess('fake_jwt_token')
     } else {
-      this.onSubmitFailure('Invalid username or password');
+      this.onSubmitFailure('Invalid username or password')
     }
-  };
+  }
 
   onEnterUsername = event => {
-    this.setState({ username: event.target.value });
+    this.setState({username: event.target.value});
   };
 
   onChangePassword = event => {
-    this.setState({ password: event.target.value });
+    this.setState({password: event.target.value});
   };
 
   renderUsername = () => {
-    const { username } = this.state;
+    const {username} = this.state;
 
     return (
       <>
@@ -61,11 +61,11 @@ class LoginForm extends Component {
           onChange={this.onEnterUsername}
         />
       </>
-    );
-  };
+    )
+  }
 
   renderPassword = () => {
-    const { password } = this.state;
+    const {password} = this.state;
 
     return (
       <>
@@ -81,12 +81,12 @@ class LoginForm extends Component {
           onChange={this.onChangePassword}
         />
       </>
-    );
-  };
+    )
+  }
 
   render() {
-    const { showSubmitError, errorMsg } = this.state;
-    const jwtToken = Cookies.get('jwt_token');
+    const {showSubmitError, errorMsg} = this.state
+    const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
       return <Redirect to="/" />;
     }
@@ -110,8 +110,8 @@ class LoginForm extends Component {
           </form>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default LoginForm;
+export default LoginForm
